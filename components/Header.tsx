@@ -29,7 +29,7 @@ function HeaderShell({ pathname, authenticated, address, onLogin, onLogout }: { 
     <header className="site-header">
       <Link className="brand" href="/">
         <span className="brand-mark">S</span>
-        <span>STRATIVA</span>
+        <span>LootBox</span>
       </Link>
       <nav aria-label="Main navigation">
         <Link className={pathname === "/" ? "active" : ""} href="/">Open box</Link>
