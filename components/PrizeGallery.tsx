@@ -60,11 +60,39 @@ export function PrizeGallery({ focusBundle }: { focusBundle?: string }) {
 
   return (
     <main className="prizes-page">
-      <div className="prizes-hero">
-        <div><span className="eyebrow">LIVE ON BASE</span><h1>PRIZE <span>VAULT</span></h1><p>Every card is read directly from the lootbox and PWN TokenBundler contracts.</p></div>
-        <div className="vault-stats"><div><span>AVAILABLE</span><strong>{loading ? "—" : bundles.length}</strong><small>bundles</small></div><div><span>PRICED VALUE</span><strong>${total.toLocaleString(undefined, { maximumFractionDigits: 0 })}</strong><small>static estimate</small></div></div>
-      </div>
-      <div className="price-note">Values use the static reference prices shown in the app. NFT and unknown-token values are not estimated.</div>
+<div className="prizes-hero">
+  <div>
+    <span className="eyebrow">LIVE ON BASE</span>
+
+    <h1>
+      PRIZE <span>VAULT</span>
+    </h1>
+
+    <p>
+      Every card is read directly from the lootbox and PWN TokenBundler
+      contracts.
+    </p>
+  </div>
+
+  <div className="vault-stats">
+    <div>
+      <span>AVAILABLE</span>
+      <strong>{loading ? "" : bundles.length}</strong>
+      <small>bundles</small>
+    </div>
+
+    <div>
+      <span>PRICED VALUE</span>
+      <strong>
+        $
+        {total.toLocaleString(undefined, {
+          maximumFractionDigits: 0,
+        })}
+      </strong>
+      <small>static estimate</small>
+    </div>
+  </div>
+</div>
       {loading && <div className="gallery-state"><span className="loader" /> Reading prize inventory…</div>}
       {error && <div className="gallery-state error">{error}<button onClick={load}>Try again</button></div>}
       {!loading && !error && bundles.length === 0 && <div className="gallery-state">No bundles are loaded right now.</div>}

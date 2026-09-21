@@ -28,17 +28,17 @@ function HeaderShell({ pathname, authenticated, address, onLogin, onLogout }: { 
   return (
     <header className="site-header">
       <Link className="brand" href="/">
-        <span className="brand-mark">S</span>
+        <span className="brand-mark">LB</span>
         <span>LootBox</span>
       </Link>
       <nav aria-label="Main navigation">
-        <Link className={pathname === "/" ? "active" : ""} href="/">Open box</Link>
-        <Link className={pathname === "/prizes" ? "active" : ""} href="/prizes">View prizes</Link>
+        <Link className={pathname === "/" ? "active" : ""} href="/">Open Box</Link>
+        <Link className={pathname === "/prizes" ? "active" : ""} href="/prizes">View Prizes</Link>
         <Link
           className={pathname === "/claims" ? "active" : ""}
           href="/claims"
         >
-          My claims
+          My Claims
         </Link>
       </nav>
       {!appConfigured ? (

@@ -8,7 +8,7 @@ const display = Lilita_One({ weight: "400", subsets: ["latin"], variable: "--fon
 const body = Space_Grotesk({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata: Metadata = {
-  title: "Strativa Lootbox",
+  title: "Lootbox",
   description: "Open a token bundle on Base",
 };
 
