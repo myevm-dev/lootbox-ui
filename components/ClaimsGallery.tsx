@@ -61,7 +61,9 @@ function ConnectedClaimsGallery() {
 
       const latest = await publicClient.getBlockNumber();
       const logs = [];
-      const chunk = BigInt(20_000);
+      // The RPC allows at most 1,000 blocks per eth_getLogs request.
+      // Both fromBlock and toBlock are inclusive.
+      const chunk = BigInt(1_000);
 
       for (
         let fromBlock = LOOTBOX_DEPLOYMENT_BLOCK;
