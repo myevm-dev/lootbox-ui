@@ -24,6 +24,8 @@ export const STATIC_TOKENS: Record<string, { symbol: string; name: string; price
 export const BOX_DISPLAY_PRICE = "1,000 TET";
 export const BOX_USD_PRICE = 1500;
 
+// Start scanning at the contract's deployment block to include its full claim history.
+// This is separate from the per-request block limit used in ClaimsGallery.
 export const LOOTBOX_DEPLOYMENT_BLOCK = BigInt(
   process.env.NEXT_PUBLIC_LOOTBOX_DEPLOYMENT_BLOCK ||
     "51500000",
